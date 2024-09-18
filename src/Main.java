@@ -35,6 +35,7 @@ public class Main {
 
         Dev devCamila = new Dev();
         devCamila.setNome("Camila");
+//        System.out.println(devCamila.getNome());
         devCamila.inscreverBootcamp(bootcamp);
         System.out.println("Conteúdos Inscritos Camila:" + devCamila.getConteudosInscritos());
         devCamila.progredir();
