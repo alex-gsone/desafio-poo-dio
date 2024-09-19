@@ -14,7 +14,7 @@ public class Main {
         Mentoria mentoria = new Mentoria("mentoria de java", "descrição mentoria java", LocalDate.now());
         Mentoria mentoria2 = new Mentoria("mentoria cs", "descricao mentoria cs", LocalDate.now());
 
-        List<Conteudo> cursosList = Arrays.asList(curso1, curso2, curso3, mentoria2);
+        List<Conteudo> cursosList = Arrays.asList(curso1, curso2, curso3);
 
         // Convertendo cursosList para um Set
         Set<Conteudo> cursosSet = new HashSet<>(cursosList);
