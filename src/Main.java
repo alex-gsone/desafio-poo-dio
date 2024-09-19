@@ -8,7 +8,7 @@ import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
-        Curso curso1 = new Curso("curso java", "descrição curso java", 8 );
+        Curso curso1 = new Curso("curso java", "descrição curso java", 8);
 //        curso1.setTitulo("curso java");
 //        curso1.setDescricao("descrição curso java");
 //        curso1.setCargaHoraria(8);
@@ -30,23 +30,20 @@ public class Main {
         System.out.println(curso2);
         System.out.println(mentoria);*/
 
-        Bootcamp bootcamp = new Bootcamp();
-        bootcamp.setNome("Bootcamp Java Developer");
-        bootcamp.setDescricao("Descrição Bootcamp Java Developer");
-        bootcamp.getConteudos().add(curso1);
-        bootcamp.getConteudos().add(curso2);
-        bootcamp.getConteudos().add(curso3);
-
         List<Conteudo> cursosList = Arrays.asList(curso1, curso2, curso3);
 
-        // Convertendo para um Set
+        // Convertendo cursosList para um Set
         Set<Conteudo> cursosSet = new HashSet<>(cursosList);
+
+        Bootcamp bootcamp = new Bootcamp("Bootcamp Java Developer", "Descrição Bootcamp Java Developer", new HashSet<>(cursosList));
+//        bootcamp.setNome("Bootcamp Java Developer");
+//        bootcamp.setDescricao("Descrição Bootcamp Java Developer");
+//        bootcamp.getConteudos().add(curso1);
+//        bootcamp.getConteudos().add(curso2);
+//        bootcamp.getConteudos().add(curso3);
 
 
         Bootcamp bootcamp2 = new Bootcamp("Bootcamp CS Developer", "Descrição Bootcamp CS Developer", cursosSet);
-//        bootcamp2.getConteudos().add(curso1);
-//        bootcamp2.getConteudos().add(curso2);
-//        bootcamp2.getConteudos().add(curso3);
 
         Dev devCamila = new Dev();
         devCamila.setNome("Camila");
