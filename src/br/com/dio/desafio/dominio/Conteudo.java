@@ -7,6 +7,15 @@ public abstract class Conteudo {
     private String titulo;
     private String descricao;
 
+    public Conteudo(String descricao, String titulo) {
+        this.descricao = descricao;
+        this.titulo = titulo;
+    }
+
+    public Conteudo() {
+
+    }
+
     public abstract double calcularXp();
 
     public String getTitulo() {
