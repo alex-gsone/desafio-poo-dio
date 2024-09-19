@@ -1,6 +1,9 @@
 import br.com.dio.desafio.dominio.*;
 
 import java.time.LocalDate;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class Main {
@@ -34,12 +37,21 @@ public class Main {
         bootcamp.getConteudos().add(curso2);
         bootcamp.getConteudos().add(curso3);
 
-        Bootcamp bootcamp2 = new Bootcamp("Bootcamp CS Developer", "Descrição Bootcamp CS Developer");
+        List<Conteudo> cursosList = Arrays.asList(curso1, curso2, curso3);
+
+        // Convertendo para um Set
+        Set<Conteudo> cursosSet = new HashSet<>(cursosList);
+
+
+        Bootcamp bootcamp2 = new Bootcamp("Bootcamp CS Developer", "Descrição Bootcamp CS Developer", cursosSet);
+//        bootcamp2.getConteudos().add(curso1);
+//        bootcamp2.getConteudos().add(curso2);
+//        bootcamp2.getConteudos().add(curso3);
 
         Dev devCamila = new Dev();
         devCamila.setNome("Camila");
 //        System.out.println(devCamila.getNome());
-        devCamila.inscreverBootcamp(bootcamp);
+        devCamila.inscreverBootcamp(bootcamp2);
         System.out.println("Conteúdos Inscritos Camila:" + devCamila.getConteudosInscritos());
         devCamila.progredir();
         devCamila.progredir();
