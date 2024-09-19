@@ -45,10 +45,10 @@ public class Main {
 
         Bootcamp bootcamp2 = new Bootcamp("Bootcamp CS Developer", "Descrição Bootcamp CS Developer", cursosSet);
 
-        Dev devCamila = new Dev();
-        devCamila.setNome("Camila");
+        Dev devCamila = new Dev("Camila", bootcamp );
+//        devCamila.setNome("Camila");
 //        System.out.println(devCamila.getNome());
-        devCamila.inscreverBootcamp(bootcamp2);
+//        devCamila.inscreverBootcamp(bootcamp);
         System.out.println("Conteúdos Inscritos Camila:" + devCamila.getConteudosInscritos());
         devCamila.progredir();
         devCamila.progredir();
@@ -59,9 +59,9 @@ public class Main {
 
         System.out.println("-------");
 
-        Dev devJoao = new Dev();
-        devJoao.setNome("Joao");
-        devJoao.inscreverBootcamp(bootcamp);
+        Dev devJoao = new Dev("Joao", bootcamp2 );
+//        devJoao.setNome("Joao");
+//        devJoao.inscreverBootcamp(bootcamp);
         System.out.println("Conteúdos Inscritos João:" + devJoao.getConteudosInscritos());
         devJoao.progredir();
         devJoao.progredir();
